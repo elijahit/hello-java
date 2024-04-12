@@ -16,7 +16,7 @@ public class StampaSaluto {
 		System.out.println("Qualsiasi risposta differente dal SI verrà interpretata come NO.");
 		String responseQuestion = scanner.nextLine();
 
-		if(responseQuestion.toUpperCase().equals("SI")) {
+		if(responseQuestion.equalsIgnoreCase("si")) {
 			// Pulisco il terminale
 			for(int i = 0; i < 10; i++) {
 				System.out.println("");
