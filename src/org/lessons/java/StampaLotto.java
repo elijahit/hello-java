@@ -16,9 +16,9 @@ public class StampaLotto {
 	}
 	
 	static void showLotto () {
-		ArrayList<ArrayList<Integer>> numberLotto = GenerateLotto();
 		String[] cityName = {"Bari", "Cagliari", "Firenze", "Genova", "Milano", "Napoli", 
 				"Palermo", "Roma", "Torino", "Venezia", "Nazionale"};
+		ArrayList<ArrayList<Integer>> numberLotto = GenerateLotto(cityName.length);
 		
 		for(int i = 0; i < numberLotto.size(); i++) {
 			System.out.println(cityName[i]+ " " + numberLotto.get(i));
@@ -51,10 +51,10 @@ public class StampaLotto {
 		return rowNumber;
 	}
 	
-	static ArrayList<ArrayList<Integer>> GenerateLotto() {
+	static ArrayList<ArrayList<Integer>> GenerateLotto(int size) {
 		RandomGenerator randomNum = RandomGenerator.of("L32X64MixRandom");
 		ArrayList<ArrayList <Integer>> numeriLotto = new ArrayList<ArrayList<Integer>>();
-		for (int i = 0; i < 11; i++) {
+		for (int i = 0; i < size; i++) {
 			numeriLotto.add(randomNumberChecker(randomNum));
 		}
 		return numeriLotto;
