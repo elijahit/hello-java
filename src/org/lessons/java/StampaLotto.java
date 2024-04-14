@@ -16,6 +16,9 @@ public class StampaLotto {
 	}
 	
 	static void showLotto () {
+		/*
+		 * Basta aggiungere delle città all'array cityName per incrementare la generazione dei numeri casuali.
+		 */
 		String[] cityName = {"Bari", "Cagliari", "Firenze", "Genova", "Milano", "Napoli", 
 				"Palermo", "Roma", "Torino", "Venezia", "Nazionale"};
 		ArrayList<ArrayList<Integer>> numberLotto = GenerateLotto(cityName.length);
